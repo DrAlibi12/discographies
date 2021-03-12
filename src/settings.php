@@ -13,7 +13,8 @@ return [
         
         // Spotify Settings
         'spotify' => [
-            'attribute' => 'data',
+            'ClientID' => 'ea7e6185497a494197020834c9019806',
+            'SecretKey' => 'ed99650b4baf496a980366df28370105',
 		],
 		
 	],

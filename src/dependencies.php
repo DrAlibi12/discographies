@@ -15,7 +15,7 @@ $container['logger'] = function ($c) {
 // spotify
 $container['spotify'] = function ($c) {
     $settings = $c->get('settings')['spotify'];
-	$spotify = new Spotify($settings['SETTING_1'], $settings['SETTING_2']);
+	$spotify = new Spotify($settings['ClientID'], $settings['SecretKey']);
     return $spotify;
 };
 
