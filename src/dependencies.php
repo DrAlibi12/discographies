@@ -12,13 +12,6 @@ $container['logger'] = function ($c) {
     return $logger;
 };
 
-// spotify
-$container['spotify'] = function ($c) {
-    $settings = $c->get('settings')['spotify'];
-	$spotify = new Spotify($settings['ClientID'], $settings['SecretKey']);
-    return $spotify;
-};
-
 /***************************************************************************/
 
 // json view
@@ -28,10 +21,12 @@ $container['JsonView'] = function ($c) {
 
 // spotify controller
 $container['SpotifyController'] = function ($c) {
-	return new EnioLotero\Discographies\Controllers\SpotifyController(
+    $settings = $c->get('settings')['spotify'];
+    return new EnioLotero\Discographies\Controllers\SpotifyController(
 		$c->get('logger'),
-		$c->get('spotify'),
-		$c->get('JsonView')
+        $c->get('JsonView'),
+        $settings['ClientID'],
+        $settings['SecretKey']
 	);
 };
 

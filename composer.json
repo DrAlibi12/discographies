@@ -11,5 +11,13 @@
             "name": "Enio Lotero",
             "email": "enio.lotero@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "EnioLotero\\Discographies\\Controllers\\": "src/controllers/",
+            "EnioLotero\\Discographies\\Models\\": "src/models/",
+            "EnioLotero\\Discographies\\Entities\\": "src/entities/",
+            "EnioLotero\\Discographies\\Views\\": "src/views/"
+        }
+    }
 }

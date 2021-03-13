@@ -19,10 +19,4 @@ require __DIR__ . '/src/middleware.php';
 require __DIR__ . '/src/routes.php';
 
 
-/*
-$app = new \Slim\App;
-
-
-*/
-
 $app->run();

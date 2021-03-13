@@ -23,7 +23,7 @@ class JsonView {
         $json = "";
         
 		if ($data !== []){
-            $json = json_encode($data);
+            $json = str_replace("\\", '', json_encode($data, JSON_PRETTY_PRINT));
 		}
 	
 		if (json_last_error() !== JSON_ERROR_NONE){
